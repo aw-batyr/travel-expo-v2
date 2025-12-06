@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "about": "About",
+    "pastSpeakers": "Past summit speakers",
+    "agenda": "Agenda",
+    "partners": "Partners",
+    "news": "News",
+    "contact": "Contact us"
+  },
+  "header": {
+    "cta": "Learn more",
+    "switchLang": "Switch language to {{lang}}",
+    "navLabel": "Primary navigation"
+  },
+  "hero": {
+    "ariaLabel": "Hero section",
+    "titleLine1": {
+      "accent": "Turkmentravel Expo -2026”",
+      "normal": "International Exhibition "
+    },
+    "titleLine2": {
+      "accent": "",
+      "normal": ""
+    },
+    "subtitle": "See you in 2026",
+    "cta": "Learn more",
+    "ctaAria": "Learn more about Tourister",
+    "description": "'Turkmen Travel' is an international exhibition dedicated to the development of tourism in Turkmenistan, held in Ashgabat. It brings together travel agencies, hotels, airlines, and tour operators from around the world to present tourist destinations, develop partnerships, and promote the country’s cultural and natural attractions."
+  },
+  "about": {
+    "heading": "What is Tourister?",
+    "body": "Georgian Tourism Summit, Tourister convenes global and regional leaders shaping the future of tourism. Here are some of the notable brands and companies that have joined us in past editions.",
+    "subheading": "What Tourister has delivered so far",
+    "bullets": [
+      "30+ Inspiring Speakers",
+      "6 Engaging Panel Discussions",
+      "6 Hands-On Workshops",
+      "300+ Industry Attendees",
+      "10+ International Experts",
+      "Countless Business Connections"
+    ],
+    "partnersAlt": "Logos of Tourister partners"
+  },
+  "sections": {
+    "pastSpeakers": "Past summit speakers",
+    "partners": "Partners and sponsors",
+    "whatToExpect": "What to expect",
+    "networking": "Networking and matchmaking",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "gallery": "Gallery",
+    "footer": "Footer"
+  },
+  "gallerySection": {
+    "date": "20-21 November, 2025",
+    "venue": "Hotel Hilton Batumi, Georgia",
+    "images": [
+      { "id": "photo-1", "alt": "Hotel Hilton Batumi exterior at sunset" },
+      {
+        "id": "photo-2",
+        "alt": "Hotel Hilton Batumi exterior reflected in water"
+      },
+      { "id": "photo-3", "alt": "Hotel Hilton Batumi illuminated at night" }
+    ]
+  },
+  "expect": {
+    "title": "What to expect at Tourister",
+    "focusTitle": "The summit will focus on 4 main areas:",
+    "focusAreas": [
+      "Hotel and MICE Industry",
+      "Tourism Marketing and Sales",
+      "Technology and Innovation",
+      "Creation of tourism products and services"
+    ],
+    "topicsTitle": "The following topics will be discussed:",
+    "topics": [
+      "MICE tourism and event organization",
+      "Data analytics and artificial intelligence",
+      "Digital management of the tourism experience",
+      "Optimization of direct sales",
+      "Tourism marketing",
+      "Maritime tourism and the blue economy",
+      "Products based on cultural heritage",
+      "Regional cooperation and destination management"
+    ],
+    "attendTitle": "Who will attend Tourister",
+    "attendLeadStrong": "Senior-level professionals and decision-makers",
+    "attendLeadRest": "from across the tourism ecosystem, including:",
+    "attendees": [
+      "Hotels & Aparthotels",
+      "Travel Operators & Agencies",
+      "Airlines & Airports",
+      "Destination Management Organizations (DMOs)",
+      "Gastronomy & Wine Tourism Hotspots",
+      "Rural Tourism Enterprises",
+      "Business Support Organizations (BSOs)",
+      "Academia & Research",
+      "National & Regional Media"
+    ]
+  },
+  "partners": {
+    "logosAria": "Partners and sponsors carousel",
+    "title": "About Tourister 2025",
+    "paragraphs": [
+      "Tourister is Georgia’s flagship tourism summit - a dynamic, multi-format B2B platform uniting global brands, regional leaders, and local innovators.",
+      "Hosted in Hotel Hilton Batumi on November 20-21, Tourister is a strategic meeting point for decision-makers, hoteliers, travel tech founders, destination managers, marketers, and content creators. With a future-focused agenda, the summit fuels cooperation and accelerates Georgia’s transformation into a regional tourism hub.",
+      "Whether you’re here to network, grow, or create, Tourister is where the future of Georgian tourism connects."
+    ],
+    "cta": "Learn more",
+    "videoAlt": "Tourister 2025 presentation",
+    "logos": [
+      { "id": "beta", "alt": "Beta Holding" },
+      { "id": "entrepreneur", "alt": "Entrepreneur" },
+      { "id": "bmg", "alt": "Business Media" },
+      { "id": "exely", "alt": "Exely" },
+      { "id": "gta", "alt": "GTA" }
+    ],
+    "stats": [
+      { "id": "area", "value": "10,000 m2", "label": "Exhibition area" },
+      { "id": "visitors", "value": "1000+", "label": "Expected visitors" },
+      {
+        "id": "countries",
+        "value": "100+",
+        "label": "Exhibitors from over 30 countries"
+      },
+      {
+        "id": "topManagement",
+        "value": "80%",
+        "label": "Participants are top-management"
+      }
+    ]
+  },
+  "pastSpeakers": {
+    "aria": "Past summit speakers carousel",
+    "cardAlt": "Portrait of {{name}}",
+    "items": [
+      {
+        "id": "giancarlo-1",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      },
+      {
+        "id": "giancarlo-2",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      },
+      {
+        "id": "giancarlo-3",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      },
+      {
+        "id": "giancarlo-4",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      },
+      {
+        "id": "giancarlo-5",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      },
+      {
+        "id": "giancarlo-6",
+        "name": "De Luca Giancarlo",
+        "company": "The Data Appeal Company",
+        "roleLine1": "Partnership & Business",
+        "roleLine2": "Development"
+      }
+    ]
+  }
+}
