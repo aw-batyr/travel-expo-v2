@@ -2,7 +2,7 @@ import Logo from "@/assets/travel-expo-logo.png";
 import { PageContainer } from "@/components/shared";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import { memo, useMemo } from "react";
+import { memo, useLayoutEffect, useMemo, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
@@ -20,6 +20,7 @@ const navItems = [
 ];
 
 const ticketIconUrl = "/ticket.svg";
+const HEADER_HEIGHT_CSS_VAR = "--site-header-height";
 
 export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
   const { t, i18n } = useTranslation();
@@ -40,8 +41,52 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
     void i18n.changeLanguage(nextLang);
   };
 
+  const headerRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const element = headerRef.current;
+    if (!element || typeof document === "undefined") {
+      return;
+    }
+
+    const updateHeight = () => {
+      const height = Math.round(element.getBoundingClientRect().height);
+      document.documentElement.style.setProperty(
+        HEADER_HEIGHT_CSS_VAR,
+        `${height}px`
+      );
+    };
+
+    updateHeight();
+
+    const handleResize = () => {
+      updateHeight();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    let resizeObserver: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(() => updateHeight());
+      resizeObserver.observe(element);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+    };
+  }, []);
+
   return (
-    <header className={cn("w-full bg-[var(--color-hero)] py-6", className)}>
+    <header
+      ref={headerRef}
+      className={cn(
+        "absolute inset-x-0 top-0 z-50 w-full bg-[var(--color-hero)] py-6",
+        className
+      )}
+    >
       <PageContainer className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-3">
           <img src={Logo} alt="Travel Expo" className="h-[58px] w-auto" />

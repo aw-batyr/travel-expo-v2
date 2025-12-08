@@ -10,9 +10,19 @@ export const HeroSection = memo(function HeroSection() {
     <SectionShell
       background="hero"
       ariaLabel={t("hero.ariaLabel")}
-      className="py-0"
+      className="relative py-0 z-1 overflow-hidden before:absolute before:inset-0 before:z-0 before:bg-black/70 before:pointer-events-none before:content-['']"
     >
-      <PageContainer className="flex min-h-[calc(100vh-106px)] flex-col items-center justify-center gap-12 px-6 pb-20 text-center">
+      <video
+        className="absolute inset-0 h-full w-full object-cover -z-10"
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-hidden="true"
+        style={{ transform: "translateZ(0)" }}
+        src="https://travel.turkmenexpo.com/app/storage/app/media/video/IMG_9811.mp4"
+      />
+      <PageContainer className="relative z-10 flex min-h-[calc(100vh-var(--site-header-height,106px))] flex-col items-center justify-center gap-12 px-6 pb-20 text-center">
         <div className="flex flex-col items-center gap-10">
           <div className="space-y-4">
             <h1 className="text-[40px] font-medium uppercase leading-[1.05] tracking-[0.02em] text-white sm:text-[52px] md:text-[64px] lg:text-[72px]">

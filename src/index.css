@@ -35,6 +35,7 @@
   :root {
     color-scheme: light;
     font-family: var(--font-sans);
+    --site-header-height: 0px;
   }
 
   .dark {

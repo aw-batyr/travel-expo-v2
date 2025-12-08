@@ -6,7 +6,7 @@ function App() {
     <div>
       <Header />
 
-      <main>
+      <main style={{ paddingTop: "var(--site-header-height, 0px)" }}>
         <Outlet />
       </main>
 
