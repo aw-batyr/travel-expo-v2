@@ -65,7 +65,7 @@ export const HeroSection = memo(function HeroSection() {
       <SectionShell
         background="hero"
         ariaLabel={t("hero.ariaLabel")}
-        className="relative z-1 overflow-hidden py-0 before:absolute before:inset-0 before:z-2 before:bg-black/90 before:pointer-events-none before:content-[''] md:hidden"
+        className="relative z-1 overflow-hidden py-0 before:absolute before:inset-0 before:z-2 before:bg-black/70 before:pointer-events-none before:content-[''] md:hidden"
       >
         <video
           className="absolute size-full w-full object-cover z-1"
