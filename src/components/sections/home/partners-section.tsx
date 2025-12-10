@@ -77,8 +77,8 @@ export function PartnersSection() {
           )}
         />
 
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
-          <div className="flex flex-1 flex-col gap-6">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-12">
+          <div className="flex flex-1 flex-col md:gap-10 gap-5">
             <h2 className="text-[23px] font-medium uppercase tracking-[0.02em] text-black">
               {t("partners.title")}
             </h2>
@@ -88,7 +88,7 @@ export function PartnersSection() {
               ))}
             </div>
             <Button
-              className="mt-2 inline-flex w-fit rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
+              className="inline-flex w-fit rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
               aria-label={t("partners.cta")}
             >
               {t("partners.cta")}
@@ -112,17 +112,14 @@ export function PartnersSection() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-start gap-10 border-t border-[#cccccc] pt-8">
-          {stats.map(({ id, value, label }, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-start md:gap-10 gap-4 pt-8">
+          {stats.map(({ id, value, label }) => (
             <div
               key={id}
-              className="flex flex-[0_0_20%] items-start justify-center gap-4"
+              className="flex items-start md:justify-center md:gap-4 gap-3"
             >
               <span
-                className={cn(
-                  "size-12 object-contain",
-                  (i === 3 && "size-20") || (i === 2 && "size-20")
-                )}
+                className={cn("size-20 object-contain flex-[0_0_42px]")}
                 style={{
                   maskImage: `url(${statIcons[id] ?? ""})`,
                   WebkitMaskImage: `url(${statIcons[id] ?? ""})`,
@@ -130,15 +127,15 @@ export function PartnersSection() {
                   WebkitMaskRepeat: "no-repeat",
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
-                  backgroundColor: "#f5b12a",
+                  backgroundColor: "#000",
                 }}
                 aria-hidden
               />
               <div className="flex flex-col gap-1 text-left">
-                <span className="text-[26px] font-semibold leading-[30px] text-[#0a1e49]">
+                <span className="md:text-[26px] text-xl font-semibold leading-[30px] text-[#0a1e49]">
                   {value}
                 </span>
-                <span className="text-[16px] leading-[22px] text-[#0a1e49]">
+                <span className="md:text-[16px] text-sm leading-[22px] text-[#0a1e49]">
                   {label}
                 </span>
               </div>

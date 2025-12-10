@@ -54,11 +54,11 @@ export function AboutSection() {
         </div>
 
         <div className="flex flex-1 justify-center lg:justify-end">
-          <div className="grid w-full max-w-[555px] grid-cols-3">
+          <div className="grid w-full max-w-[555px] grid-cols-3 justify-items-center">
             {logos.map(({ id, src }) => (
               <div
                 key={id}
-                className="flex items-center justify-center size-26"
+                className="flex items-center justify-center md:size-26 size-16"
               >
                 <img
                   src={src}

@@ -22,7 +22,7 @@ export function GallerySection() {
     <SectionShell
       background="base"
       ariaLabel={t("sections.gallery")}
-      className="py-14"
+      className="pt-14 pb-30"
     >
       <PageContainer className="flex flex-col items-center gap-10">
         <div className="space-y-2 text-center">
@@ -38,7 +38,7 @@ export function GallerySection() {
           {images.map(({ id, alt }) => (
             <div
               key={id}
-              className="relative h-[392px] w-full max-w-[392px] shrink-0 overflow-hidden"
+              className="relative md:size-[392px] size-[335px] overflow-hidden"
             >
               <img
                 src={photoUrl}

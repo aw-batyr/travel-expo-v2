@@ -9,7 +9,7 @@
   },
   "header": {
     "cta": "Learn more",
-    "switchLang": "Switch language to {{lang}}",
+    "switchLang": "{{lang}}",
     "navLabel": "Primary navigation"
   },
   "hero": {

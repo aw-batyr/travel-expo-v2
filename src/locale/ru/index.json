@@ -9,7 +9,7 @@
   },
   "header": {
     "cta": "Узнать больше",
-    "switchLang": "Переключить язык на {{lang}}",
+    "switchLang": "{{lang}}",
     "navLabel": "Основная навигация"
   },
   "hero": {

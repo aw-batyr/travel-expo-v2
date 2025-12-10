@@ -50,9 +50,9 @@ export function PastSpeakersSection() {
               {speakers.map(({ id, name, company, roleLine1, roleLine2 }) => (
                 <article
                   key={id}
-                  className="h-[401px] w-[221px] shrink-0 overflow-hidden border border-[#cccccc] bg-white"
+                  className="md:h-[401px] md:flex-[0_0_221px] flex-[0_0_335px] shrink-0 overflow-hidden border border-[#cccccc] bg-white"
                 >
-                  <div className="h-[222px] w-full overflow-hidden">
+                  <div className="md:h-[222px] h-[335px] w-full overflow-hidden">
                     <img
                       src={speakerImageUrl}
                       alt={t("pastSpeakers.cardAlt", { name })}
