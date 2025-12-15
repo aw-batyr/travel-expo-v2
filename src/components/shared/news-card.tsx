@@ -14,15 +14,20 @@ export const NewsCard = ({ className, date, title, img }: Props) => {
 
   return (
     <article
-      className={clsx("bg-secondary flex flex-col justify-between", className)}
+      className={clsx(
+        "bg-white text-foreground drop-shadow-md flex flex-col justify-between",
+        className
+      )}
     >
-      <div className="flex flex-col gap-3 md:py-10 pt-10 pb-5 md:px-5 px-3 text-white">
-        <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 md:py-10 pt-10 pb-5 md:px-5 px-3">
+        <div className="flex items-center justify-between text-foreground">
           <span className="text-xl font-medium">{formattedDate}</span>
           <ArrowRight className="size-4" />
         </div>
-        <hr />
-        <p className="p text-ellipsis line-clamp-3">{title}</p>
+        <hr className="border-secondary" />
+        <p className="p text-ellipsis line-clamp-3 text-muted-foreground">
+          {title}
+        </p>
       </div>
 
       {image ? (

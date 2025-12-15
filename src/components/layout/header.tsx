@@ -112,7 +112,7 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
     <header
       ref={headerRef}
       className={cn(
-        "absolute inset-x-0 top-0 z-50 w-full bg-[var(--color-hero)] py-6",
+        "absolute inset-x-0 top-0 z-50 w-full bg-transparent py-6",
         className
       )}
     >

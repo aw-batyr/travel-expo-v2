@@ -32,7 +32,12 @@ export const Footer = memo(function Footer({ className }: FooterProps) {
   );
 
   return (
-    <footer className={cn("w-full bg-[var(--color-primary)] py-8", className)}>
+    <footer
+      className={cn(
+        "w-full bg-[var(--color-primary)] py-8 border-t border-white/50",
+        className
+      )}
+    >
       <PageContainer className="flex max-w-[1224px] flex-col items-center gap-6">
         <nav aria-label={t("header.navLabel")} className="w-full">
           <ul className="flex flex-wrap items-center justify-center gap-4 text-[13px] font-medium uppercase tracking-wide text-white">
