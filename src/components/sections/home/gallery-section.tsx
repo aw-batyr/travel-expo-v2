@@ -22,7 +22,7 @@ export function GallerySection() {
     <SectionShell
       background="base"
       ariaLabel={t("sections.gallery")}
-      className="pt-14 pb-30"
+      className="pt-14"
     >
       <PageContainer className="flex flex-col items-center gap-10">
         <div className="space-y-2 text-center">

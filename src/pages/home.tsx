@@ -1,3 +1,4 @@
+import { NewsSection } from "@/components/sections/home";
 import { AboutSection } from "@/components/sections/home/about-section";
 import { GallerySection } from "@/components/sections/home/gallery-section";
 import { HeroSection } from "@/components/sections/home/hero-section";
@@ -14,6 +15,7 @@ export function Home() {
       <PartnersSection />
       <WhatToExpectSection />
       <GallerySection />
+      <NewsSection />
     </div>
   );
 }

@@ -23,7 +23,7 @@
       "normal": ""
     },
     "subtitle": "See you in 2026",
-    "cta": "Learn more",
+    "cta": "Registration",
     "ctaAria": "Learn more about Tourister",
     "description": "'Turkmen Travel' is an international exhibition dedicated to the development of tourism in Turkmenistan, held in Ashgabat. It brings together travel agencies, hotels, airlines, and tour operators from around the world to present tourist destinations, develop partnerships, and promote the country’s cultural and natural attractions."
   },
@@ -177,5 +177,6 @@
         "roleLine2": "Development"
       }
     ]
-  }
+  },
+  "news": "News"
 }

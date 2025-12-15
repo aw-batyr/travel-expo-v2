@@ -2,6 +2,7 @@ import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { PageContainer, SectionShell } from "@/components/shared";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const HeroSection = memo(function HeroSection() {
   const { t } = useTranslation();
@@ -46,12 +47,17 @@ export const HeroSection = memo(function HeroSection() {
               </p>
             </div>
 
-            <Button
-              className="rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
-              aria-label={t("hero.ctaAria")}
+            <Link
+              to="https://travel.turkmenexpo.com/stand-form"
+              target="_blank"
             >
-              {t("hero.cta")}
-            </Button>
+              <Button
+                className="rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
+                aria-label={t("hero.ctaAria")}
+              >
+                {t("hero.cta")}
+              </Button>
+            </Link>
           </div>
 
           <p className="max-w-[638px] text-[14px] leading-[24px] text-white/80">
@@ -101,12 +107,17 @@ export const HeroSection = memo(function HeroSection() {
               </p>
             </div>
 
-            <Button
-              className="w-full max-w-[180px] rounded-[4px] bg-[var(--color-secondary)] px-6 py-3 text-sm font-normal uppercase tracking-[0.04em] text-white hover:bg-[#d73a1f]"
-              aria-label={t("hero.ctaAria")}
+            <Link
+              to="https://travel.turkmenexpo.com/stand-form"
+              target="_blank"
             >
-              {t("hero.cta")}
-            </Button>
+              <Button
+                className="w-full max-w-[180px] rounded-[4px] bg-[var(--color-secondary)] px-6 py-3 text-sm font-normal uppercase tracking-[0.04em] text-white hover:bg-[#d73a1f]"
+                aria-label={t("hero.ctaAria")}
+              >
+                {t("hero.cta")}
+              </Button>
+            </Link>
           </div>
 
           <p className="text-sm leading-6 relative text-white/80">

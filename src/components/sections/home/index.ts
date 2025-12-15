@@ -7,3 +7,4 @@ export * from "./networking-section";
 export * from "./testimonials-section";
 export * from "./pricing-section";
 export * from "./gallery-section";
+export * from "./news-section";
