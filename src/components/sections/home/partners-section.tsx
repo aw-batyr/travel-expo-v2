@@ -52,15 +52,15 @@ export function PartnersSection() {
     <SectionShell
       background="base"
       ariaLabel={t("sections.partners")}
-      className="pt-10 pb-14"
+      className="pt-10 pb-14 overflow-hidden"
     >
       <PageContainer className="flex flex-col gap-12">
         <Carousel
           slides={logos}
           ariaLabel={t("partners.logosAria")}
           options={{ loop: true }}
-          autoPlayInterval={2600}
-          className="w-full"
+          marqueeSpeed={80}
+          className="w-full overflow-visible! select-none"
           containerClassName="items-center gap-[120px] py-[10px]"
           renderSlide={({ id, alt, src }) => (
             <div

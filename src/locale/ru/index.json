@@ -1,11 +1,11 @@
 {
   "nav": {
-    "about": "О мероприятии",
-    "pastSpeakers": "Спикеры прошлых саммитов",
-    "agenda": "Программа",
-    "partners": "Партнеры",
-    "news": "Новости",
-    "contact": "Контакты"
+    "about": "ABOUT US",
+    "visit": "VISIT",
+    "exhibit": "EXHIBIT & SPONSOR",
+    "media": "MEDIA",
+    "agenda": "AGENDA",
+    "contact": "CONTACT US"
   },
   "header": {
     "cta": "Узнать больше",

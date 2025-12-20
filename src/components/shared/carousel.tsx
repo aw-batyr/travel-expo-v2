@@ -1,10 +1,4 @@
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useMemo, useRef, type ReactNode } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
 import { cn } from "@/lib/utils";
@@ -14,6 +8,7 @@ type CarouselProps<T> = {
   renderSlide: (item: T) => ReactNode;
   options?: EmblaOptionsType;
   autoPlayInterval?: number;
+  marqueeSpeed?: number;
   className?: string;
   containerClassName?: string;
   ariaLabel?: string;
@@ -25,6 +20,7 @@ export function Carousel<T>({
   renderSlide,
   options,
   autoPlayInterval,
+  marqueeSpeed,
   className,
   containerClassName,
   ariaLabel,
@@ -35,14 +31,30 @@ export function Carousel<T>({
       () => ({
         align: "start",
         dragFree: true,
-        loop: false,
+        loop: marqueeSpeed != null ? true : false,
         containScroll: "trimSnaps",
         ...options,
       }),
-      [options]
+      [options, marqueeSpeed]
     )
   );
   const timerRef = useRef<number | null>(null);
+  const marqueeRef = useRef<number | null>(null);
+  const useAutoplay = Boolean(autoPlayInterval) && marqueeSpeed == null;
+
+  const stopAutoplay = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  const stopMarquee = useCallback(() => {
+    if (marqueeRef.current) {
+      cancelAnimationFrame(marqueeRef.current);
+      marqueeRef.current = null;
+    }
+  }, []);
 
   const startAutoplay = useCallback(() => {
     if (!emblaApi || !autoPlayInterval) return;
@@ -59,29 +71,55 @@ export function Carousel<T>({
       }, autoPlayInterval);
     };
 
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
+    stopAutoplay();
     tick();
-  }, [emblaApi, autoPlayInterval]);
+  }, [autoPlayInterval, emblaApi, stopAutoplay]);
+
+  const startMarquee = useCallback(() => {
+    if (!emblaApi || marqueeSpeed == null) return;
+    if (typeof window === "undefined") return;
+
+    stopMarquee();
+    let lastTime = window.performance.now();
+
+    const tick = (time: number) => {
+      const deltaSec = (time - lastTime) / 1000;
+      lastTime = time;
+      emblaApi.scrollBy(marqueeSpeed * deltaSec);
+      marqueeRef.current = window.requestAnimationFrame(tick);
+    };
+
+    marqueeRef.current = window.requestAnimationFrame(tick);
+  }, [emblaApi, marqueeSpeed, stopMarquee]);
 
   useEffect(() => {
+    if (!useAutoplay) return;
     startAutoplay();
     return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
+      stopAutoplay();
     };
-  }, [startAutoplay]);
+  }, [startAutoplay, stopAutoplay, useAutoplay]);
+
+  useEffect(() => {
+    if (marqueeSpeed == null) return;
+    startMarquee();
+    return () => {
+      stopMarquee();
+    };
+  }, [marqueeSpeed, startMarquee, stopMarquee]);
 
   const handleMouseEnter = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
+    stopAutoplay();
+    stopMarquee();
   };
 
   const handleMouseLeave = () => {
-    startAutoplay();
+    if (useAutoplay) {
+      startAutoplay();
+    }
+    if (marqueeSpeed != null) {
+      startMarquee();
+    }
   };
 
   return (

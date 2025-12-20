@@ -1,5 +1,4 @@
 import { NewsSection } from "@/components/sections/home";
-import { AboutSection } from "@/components/sections/home/about-section";
 import { GallerySection } from "@/components/sections/home/gallery-section";
 import { HeroSection } from "@/components/sections/home/hero-section";
 import { PartnersSection } from "@/components/sections/home/partners-section";
@@ -10,7 +9,7 @@ export function Home() {
   return (
     <div className="bg-background text-foreground">
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <PastSpeakersSection />
       <PartnersSection />
       <WhatToExpectSection />

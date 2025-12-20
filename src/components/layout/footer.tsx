@@ -9,11 +9,11 @@ type FooterProps = {
 };
 
 const navItems = [
-  { key: "nav.about", hasDropdown: true },
-  { key: "nav.pastSpeakers" },
+  { key: "nav.about" },
+  { key: "nav.visit" },
+  { key: "nav.exhibit" },
+  { key: "nav.media" },
   { key: "nav.agenda" },
-  { key: "nav.partners" },
-  { key: "nav.news" },
   { key: "nav.contact" },
 ];
 

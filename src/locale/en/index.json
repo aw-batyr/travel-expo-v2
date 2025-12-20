@@ -1,11 +1,11 @@
 {
   "nav": {
-    "about": "About",
-    "pastSpeakers": "Past summit speakers",
-    "agenda": "Agenda",
-    "partners": "Partners",
-    "news": "News",
-    "contact": "Contact us"
+    "about": "ABOUT US",
+    "visit": "VISIT",
+    "exhibit": "EXHIBIT & SPONSOR",
+    "media": "MEDIA",
+    "agenda": "AGENDA",
+    "contact": "CONTACT US"
   },
   "header": {
     "cta": "Learn more",
