@@ -1,82 +1,41 @@
-import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import useEmblaCarousel from "embla-carousel-react";
 import { PageContainer } from "@/components/shared/page-container";
 import { SectionShell } from "@/components/shared/section-shell";
-
-type SpeakerCard = {
-  id: string;
-  name: string;
-  company: string;
-  roleLine1: string;
-  roleLine2: string;
-};
-
-const speakerImageUrl = "/team.jfif";
+import { Button } from "@/components/ui/button";
 
 export function PastSpeakersSection() {
   const { t } = useTranslation();
-  const [emblaRef] = useEmblaCarousel({
-    align: "start",
-    dragFree: true,
-    loop: false,
-  });
-
-  const speakers = useMemo(
-    () =>
-      (t("pastSpeakers.items", { returnObjects: true }) as SpeakerCard[]) ?? [],
-    [t]
-  );
 
   return (
-    <SectionShell
-      background="primary"
-      ariaLabel={t("sections.pastSpeakers")}
-      className="py-16"
-    >
-      <PageContainer className="flex flex-col items-center gap-10">
+    <SectionShell background="primary" className="py-10">
+      <PageContainer className="flex flex-col items-center gap-8 max-w-[1320px]">
         <h2 className="text-center text-[24px] font-medium uppercase tracking-wide text-black">
-          {t("sections.pastSpeakers")}
+          {t("enquire.title")}
         </h2>
 
-        <div className="w-full max-w-[1224px]">
-          <div
-            className="overflow-hidden"
-            ref={emblaRef}
-            aria-label={t("pastSpeakers.aria")}
-            role="region"
-          >
-            <div className="flex gap-5">
-              {speakers.map(({ id, name, company, roleLine1, roleLine2 }) => (
-                <article
-                  key={id}
-                  className="md:h-[401px] md:flex-[0_0_221px] flex-[0_0_335px] shrink-0 overflow-hidden border border-[#cccccc] bg-white"
-                >
-                  <div className="md:h-[222px] h-[335px] w-full overflow-hidden">
-                    <img
-                      src={speakerImageUrl}
-                      alt={t("pastSpeakers.cardAlt", { name })}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
+        <div
+          className="relative w-full max-w-[1224px] overflow-hidden"
+          role="region"
+          style={{
+            backgroundImage: "url('/past-speakers-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="relative flex h-full min-h-[260px] items-center px-20 py-8 sm:min-h-[320px] md:min-h-[360px] lg:min-h-[414px]">
+            <div className="max-w-[515px] rounded-[3px] bg-white/80 p-10 shadow backdrop-blur-sm">
+              <p className="text-[22px] font-semibold leading-[30px] text-[#1c1c24] sm:text-[24px] sm:leading-[32px]">
+                {t("enquire.title")}
+              </p>
 
-                  <div className="flex flex-col gap-5 p-5">
-                    <div className="text-[18px] font-medium uppercase leading-[19px] text-black">
-                      {name}
-                    </div>
-                    <div className="space-y-3">
-                      <div className="text-[18px] font-medium uppercase leading-[19px] text-black">
-                        {company}
-                      </div>
-                      <div className="text-[14px] leading-[24px] text-[#333333]">
-                        <p className="mb-0 leading-[24px]">{roleLine1}</p>
-                        <p className="leading-[24px]">{roleLine2}</p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <Button
+                variant="secondary"
+                size="sm"
+                className="mt-14 h-11 rounded-[3px] px-6 text-xs font-semibold uppercase tracking-[0.05em]"
+              >
+                {t("enquire.button.text")}
+              </Button>
             </div>
           </div>
         </div>

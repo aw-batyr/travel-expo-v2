@@ -41,12 +41,12 @@ export function PartnersSection() {
     [t]
   );
 
-  const statIcons: Record<string, string> = {
-    area: "/panel.svg.svg",
-    visitors: "/attendee.svg.svg",
-    countries: "/workshop.svg.svg",
-    topManagement: "/speaker.svg.svg",
-  };
+  const statIcons = [
+    "/stats/1.svg",
+    "/stats/2.svg",
+    "/stats/3.svg",
+    "/stats/4.svg",
+  ];
 
   return (
     <SectionShell
@@ -78,7 +78,7 @@ export function PartnersSection() {
         />
 
         <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-12">
-          <div className="flex flex-1 flex-col md:gap-10 gap-5">
+          <div className="flex flex-1 flex-col gap-5">
             <h2 className="text-[23px] font-medium uppercase tracking-[0.02em] text-black">
               {t("partners.title")}
             </h2>
@@ -113,22 +113,15 @@ export function PartnersSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-start md:gap-10 gap-4 pt-8">
-          {stats.map(({ id, value, label }) => (
+          {stats.map(({ id, value, label }, index) => (
             <div
               key={id}
               className="flex items-start md:justify-center md:gap-4 gap-3"
             >
-              <span
-                className={cn("size-20 object-contain flex-[0_0_42px]")}
-                style={{
-                  maskImage: `url(${statIcons[id] ?? ""})`,
-                  WebkitMaskImage: `url(${statIcons[id] ?? ""})`,
-                  maskRepeat: "no-repeat",
-                  WebkitMaskRepeat: "no-repeat",
-                  maskSize: "contain",
-                  WebkitMaskSize: "contain",
-                  backgroundColor: "#000",
-                }}
+              <img
+                src={statIcons[index] ?? ""}
+                alt=""
+                className={cn("size-10 object-contain flex-[0_0_42px]")}
                 aria-hidden
               />
               <div className="flex flex-col gap-1 text-left">

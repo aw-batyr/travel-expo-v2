@@ -55,47 +55,86 @@
     "date": "20-21 November, 2025",
     "venue": "Hotel Hilton Batumi, Georgia",
     "images": [
-      { "id": "photo-1", "alt": "Hotel Hilton Batumi exterior at sunset" },
+      {
+        "id": "photo-1",
+        "alt": "Hotel Hilton Batumi exterior at sunset"
+      },
       {
         "id": "photo-2",
         "alt": "Hotel Hilton Batumi exterior reflected in water"
       },
-      { "id": "photo-3", "alt": "Hotel Hilton Batumi illuminated at night" }
+      {
+        "id": "photo-3",
+        "alt": "Hotel Hilton Batumi illuminated at night"
+      }
+    ]
+  },
+  "attend": {
+    "title": "Who should attend Turkmen Travel - 2026?",
+
+    "cards": [
+      {
+        "title": "Travel Agencies & Tour Operators",
+        "description": "To promote their tours, advertise new routes, establish partnerships, and participate in international tourism projects (including Silk Road, Cultural Tourism, Agro Tourism).",
+        "button": { "text": "Discover more", "link": "" }
+      },
+      {
+        "title": "Hotels, Resorts, and Wellness Centers",
+        "description": "To present accommodation services, wellness programs, health retreats, and attract tourism companies.",
+        "button": { "text": "Discover more", "link": "" }
+      },
+      {
+        "title": "Airlines and Transport Providers",
+        "description": "To promote services, expand flight networks, and build partnerships with tour operators and government institutions.",
+        "button": { "text": "Discover more", "link": "" }
+      },
+      {
+        "title": "Restaurants, Food Producers, and Gastro Brands",
+        "description": "To participate in the Food Expo, showcase national cuisine, gastronomic tours, and local products.",
+        "button": { "text": "Discover more", "link": "" }
+      },
+      {
+        "title": "Cultural Centers, Museums, and Craft Masters",
+        "description": "For promoting cultural heritage, souvenir products, handicrafts, and traditional arts.",
+        "button": { "text": "Discover more", "link": "" }
+      },
+      {
+        "title": "Educational Institutions",
+        "description": "Universities, colleges, and training centers promoting educational tourism and attracting international students.",
+        "button": { "text": "Discover more", "link": "" }
+      }
     ]
   },
   "expect": {
-    "title": "What to expect at Tourister",
-    "focusTitle": "The summit will focus on 4 main areas:",
-    "focusAreas": [
-      "Hotel and MICE Industry",
-      "Tourism Marketing and Sales",
-      "Technology and Innovation",
-      "Creation of tourism products and services"
-    ],
-    "topicsTitle": "The following topics will be discussed:",
-    "topics": [
-      "MICE tourism and event organization",
-      "Data analytics and artificial intelligence",
-      "Digital management of the tourism experience",
-      "Optimization of direct sales",
-      "Tourism marketing",
-      "Maritime tourism and the blue economy",
-      "Products based on cultural heritage",
-      "Regional cooperation and destination management"
-    ],
-    "attendTitle": "Who will attend Tourister",
-    "attendLeadStrong": "Senior-level professionals and decision-makers",
-    "attendLeadRest": "from across the tourism ecosystem, including:",
-    "attendees": [
-      "Hotels & Aparthotels",
-      "Travel Operators & Agencies",
-      "Airlines & Airports",
-      "Destination Management Organizations (DMOs)",
-      "Gastronomy & Wine Tourism Hotspots",
-      "Rural Tourism Enterprises",
-      "Business Support Organizations (BSOs)",
-      "Academia & Research",
-      "National & Regional Media"
+    "cards": [
+      {
+        "title": "Why visit?",
+        "description": [
+          "Discover new destinations and routes across Turkmenistan, Central Asia, and the Silk Road region.",
+          "Meet reliable partners — airlines, hotels, tour operators, wellness centers, and education providers.",
+          "Explore the latest tourism trends — medical, agro, eco, cultural, and gastro tourism.",
+          "Gain fresh ideas and inspiration through presentations, workshops, and live demonstrations.",
+          "Grow your business or career with new contacts and opportunities."
+        ],
+        "button": {
+          "text": "Discover more",
+          "link": ""
+        }
+      },
+      {
+        "title": "Why exhibit?",
+        "description": [
+          "Showcase your services internationally and reach a wide tourism audience in Central Asia.",
+          "Build strong partnerships with tour operators, investors, ministries, and industry leaders.",
+          "Attract new clients and expand your market by presenting your products and programs.",
+          "Strengthen your brand and credibility by being part of a major international event.",
+          "Access business and investment opportunities across tourism, education, healthcare, agriculture, and technology."
+        ],
+        "button": {
+          "text": "Discover more",
+          "link": ""
+        }
+      }
     ]
   },
   "partners": {
@@ -109,15 +148,38 @@
     "cta": "Learn more",
     "videoAlt": "Tourister 2025 presentation",
     "logos": [
-      { "id": "beta", "alt": "Beta Holding" },
-      { "id": "entrepreneur", "alt": "Entrepreneur" },
-      { "id": "bmg", "alt": "Business Media" },
-      { "id": "exely", "alt": "Exely" },
-      { "id": "gta", "alt": "GTA" }
+      {
+        "id": "beta",
+        "alt": "Beta Holding"
+      },
+      {
+        "id": "entrepreneur",
+        "alt": "Entrepreneur"
+      },
+      {
+        "id": "bmg",
+        "alt": "Business Media"
+      },
+      {
+        "id": "exely",
+        "alt": "Exely"
+      },
+      {
+        "id": "gta",
+        "alt": "GTA"
+      }
     ],
     "stats": [
-      { "id": "area", "value": "10,000 m2", "label": "Exhibition area" },
-      { "id": "visitors", "value": "1000+", "label": "Expected visitors" },
+      {
+        "id": "area",
+        "value": "10,000 m2",
+        "label": "Exhibition area"
+      },
+      {
+        "id": "visitors",
+        "value": "1000+",
+        "label": "Expected visitors"
+      },
       {
         "id": "countries",
         "value": "100+",
@@ -130,53 +192,13 @@
       }
     ]
   },
-  "pastSpeakers": {
-    "aria": "Past summit speakers carousel",
-    "cardAlt": "Portrait of {{name}}",
-    "items": [
-      {
-        "id": "giancarlo-1",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      },
-      {
-        "id": "giancarlo-2",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      },
-      {
-        "id": "giancarlo-3",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      },
-      {
-        "id": "giancarlo-4",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      },
-      {
-        "id": "giancarlo-5",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      },
-      {
-        "id": "giancarlo-6",
-        "name": "De Luca Giancarlo",
-        "company": "The Data Appeal Company",
-        "roleLine1": "Partnership & Business",
-        "roleLine2": "Development"
-      }
-    ]
+  "enquire": {
+    "title": "Registration for the international exhibition Turkmen Travel is open",
+    "button": {
+      "text": "Register",
+      "link": ""
+    }
   },
+
   "news": "News"
 }

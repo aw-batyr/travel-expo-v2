@@ -3,15 +3,17 @@ import { initReactI18next } from "react-i18next";
 
 import en from "./en/index.json";
 import ru from "./ru/index.json";
+import tm from "./tm/index.json";
 
 void i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     ru: { translation: ru },
+    tm: { translation: tm },
   },
   lng: "en",
   fallbackLng: "en",
-  supportedLngs: ["en", "ru"],
+  supportedLngs: ["en", "ru", "tm"],
   interpolation: {
     escapeValue: false,
   },

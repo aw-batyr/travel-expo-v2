@@ -66,7 +66,14 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
   const { t, i18n } = useTranslation();
 
   const lang = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
-  const nextLang = lang === "ru" ? "en" : "ru";
+  const languageOptions = [
+    { code: "en", label: "EN" },
+    { code: "ru", label: "RU" },
+    { code: "tm", label: "TM" },
+  ];
+  const languageOrder = languageOptions.map((item) => item.code);
+  const currentIndex = Math.max(0, languageOrder.indexOf(lang));
+  const nextLang = languageOrder[(currentIndex + 1) % languageOrder.length];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const translatedNav = useMemo(
@@ -92,6 +99,10 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
 
   const handleLanguageToggle = () => {
     void i18n.changeLanguage(nextLang);
+  };
+
+  const handleLanguageChange = (code: string) => {
+    void i18n.changeLanguage(code);
   };
 
   const toggleMenu = useCallback(() => {
@@ -183,12 +194,12 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                   </a>
 
                   {dropdownList && (
-                    <div
-                      role="menu"
-                      aria-label={`${label} submenu`}
-                      className="pointer-events-none absolute left-0 top-full z-20 mt-1 w-[220px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto"
-                    >
-                      <div className="overflow-hidden py-2 rounded-[2px] bg-[#F0EFEF]">
+              <div
+                role="menu"
+                aria-label={`${label} submenu`}
+                className="pointer-events-none absolute left-0 top-full z-20 w-[220px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto pt-2"
+              >
+                <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2">
                         <ul className="flex flex-col">
                           {dropdownList.map((item) => {
                             const Icon = item.icon;
@@ -239,14 +250,44 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
             </span>
           </Button>
           <div className="hidden items-center gap-3 md:flex">
-            <Button
-              size="sm"
-              onClick={handleLanguageToggle}
-              aria-label={switchLangLabel}
-              className="rounded-[2px] bg-[var(--color-primary)] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white hover:bg-[#f3a320]"
-            >
-              {lang.toUpperCase()}
-            </Button>
+            <div className="group relative">
+              <button
+                type="button"
+                aria-label={switchLangLabel}
+                className="inline-flex items-center gap-1 rounded-[2px] bg-[var(--color-primary)] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white transition hover:bg-[#f3a320]"
+              >
+                <span>{lang.toUpperCase()}</span>
+                <ChevronDown
+                  aria-hidden
+                  className="h-3 w-3 text-white/80 transition duration-150 group-hover:text-white"
+                  strokeWidth={2.5}
+                />
+              </button>
+
+              <div
+                role="menu"
+                aria-label={switchLangLabel}
+                className="pointer-events-none absolute left-0 top-full z-20 w-[140px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-hover:opacity-100 group-hover:pointer-events-auto pt-2"
+              >
+                <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2">
+                  <ul className="flex flex-col">
+                    {languageOptions
+                      .filter((item) => item.code !== lang)
+                      .map((item) => (
+                      <li key={item.code}>
+                        <button
+                          type="button"
+                          onClick={() => handleLanguageChange(item.code)}
+                          className="flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-[#333333] transition hover:bg-[#26292E]/[8%] hover:text-black"
+                        >
+                          <span>{item.label}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
             <Button
               size="sm"
               className="rounded-[2px] bg-[var(--color-secondary)] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white hover:bg-[#d73a1f]"

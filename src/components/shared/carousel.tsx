@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 type CarouselProps<T> = {
   slides: T[];
-  renderSlide: (item: T) => ReactNode;
+  renderSlide: (item: T, id: number) => ReactNode;
   options?: EmblaOptionsType;
   autoPlayInterval?: number;
   marqueeSpeed?: number;
@@ -80,12 +80,16 @@ export function Carousel<T>({
     if (typeof window === "undefined") return;
 
     stopMarquee();
+    const scrollBy =
+      (emblaApi as unknown as { scrollBy?: (distance: number) => void })
+        .scrollBy ?? null;
+    if (!scrollBy) return;
     let lastTime = window.performance.now();
 
     const tick = (time: number) => {
       const deltaSec = (time - lastTime) / 1000;
       lastTime = time;
-      emblaApi.scrollBy(marqueeSpeed * deltaSec);
+      scrollBy(marqueeSpeed * deltaSec);
       marqueeRef.current = window.requestAnimationFrame(tick);
     };
 
@@ -132,7 +136,7 @@ export function Carousel<T>({
       onMouseLeave={handleMouseLeave}
     >
       <div className={cn("flex", containerClassName)}>
-        {slides.map((item) => renderSlide(item))}
+        {slides.map((item, i) => renderSlide(item, i))}
       </div>
     </div>
   );

@@ -1,0 +1,204 @@
+{
+  "nav": {
+    "about": "ABOUT US",
+    "visit": "VISIT",
+    "exhibit": "EXHIBIT & SPONSOR",
+    "media": "MEDIA",
+    "agenda": "AGENDA",
+    "contact": "CONTACT US"
+  },
+  "header": {
+    "cta": "Узнать больше",
+    "switchLang": "{{lang}}",
+    "navLabel": "Основная навигация"
+  },
+  "hero": {
+    "ariaLabel": "Герой страницы",
+    "titleLine1": {
+      "accent": "",
+      "normal": "Halkara “Turkmentravel  Expo -2026”  syýahatçylyk sergisi "
+    },
+    "titleLine2": {
+      "accent": "",
+      "normal": ""
+    },
+    "subtitle": "Увидимся в 2026",
+    "cta": "Ýüz tutmak",
+    "ctaAria": "Узнать больше о Туристер",
+    "description": "«Turkmen Travel» — Türkmenistanda syýahatçylygy ösdürmäge bagyşlanan halkara sergi bolup, Aşgabat şäherinde geçirilýär. Sergi dünýäniň dürli ýurtlaryndan syýahatçylyk agentliklerini, myhmanhanalary, awiakompaniýalary we syýahatçylyk operatorlaryny birleşdirip, täze syýahat ugurlaryny giňden tanatmak, hyzmatdaşlyklary ösdürmek hem-de ýurduň medeni we tebigy gözelliklerini wagyz etmek üçin giň mümkinçilik döredýär."
+  },
+  "about": {
+    "heading": "Что такое Туристер?",
+    "body": "Грузинский туристический саммит Tourister объединяет мировых и региональных лидеров, формирующих будущее туризма. Вот некоторые известные бренды и компании, которые уже участвовали в прошлых выпусках.",
+    "subheading": "Что уже дал Туристер",
+    "bullets": [
+      "30+ вдохновляющих спикеров",
+      "6 содержательных панельных дискуссий",
+      "6 практических воркшопов",
+      "300+ участников индустрии",
+      "10+ международных экспертов",
+      "Сотни деловых знакомств"
+    ],
+    "partnersAlt": "Логотипы партнеров Туристер"
+  },
+  "sections": {
+    "pastSpeakers": "Спикеры прошлых саммитов",
+    "partners": "Партнеры и спонсоры",
+    "whatToExpect": "Что вас ждет",
+    "networking": "Нетворкинг и встречи",
+    "testimonials": "Отзывы",
+    "pricing": "Стоимость участия",
+    "gallery": "Галерея",
+    "footer": "Футер"
+  },
+  "attend": {
+    "title": "TurkmenTravel Expo-2026-a gatnaşmaly taraplar kimler?",
+    "cards": [
+      {
+        "title": "Syýahatçylyk agentlikleri we operatorlar",
+        "description": "Täze ugurlary tanatmak, hyzmatdaş tapmak, öz hyzmatlaryny halkara derejede ösdürmek üçin (Ýüpek ýoly, Medeni, Agro syýahatçylyk ugurlary goşulýar).",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Myhmanhanalar, şypahanalar we dynç alyş merkezleri",
+        "description": "Wellness, dynç alyş, sagaldyş hyzmatlaryny tanatmak we syýahatçylyk kompaniýalary bilen hyzmatdaşlyk guramak üçin.",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Awiakompaniýalar we transport üpjün edijiler",
+        "description": "Uçuş ugurlaryny ösdürmek, hyzmatdaş tapmak we täze bazarlara çykmak üçin.",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Restoranlar, azyk öndürijiler we gastro-brendler",
+        "description": "Food Expo üçin — milli tagamlary, ýerli önümleri, gastro-syýahatçylygy tanatmak.",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Medeni merkezler, muzeýler we halk sungatynyň ussatlary",
+        "description": "Sowgatlyk Önümlerini, milli mirasy we däp-dessurlary tanatmak üçin.",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Bilim edaralary",
+        "description": "Uniwersitetler, kollejler, bilim merkezleri — halkara talyplary çekmek, bilim syýahatçylygyny ösdürmek üçin.",
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      }
+    ]
+  },
+  "expect": {
+    "title": "TurkmenTravel Expo 2026-nyň bir bölegi boluň",
+    "cards": [
+      {
+        "title": "Näme üçin gitmeli?",
+        "description": [
+          "Täze syýahat ugurlaryny açyň — Türkmenistan, Merkezi Aziýa we Ýüpek ýoly boýunça.",
+          "Ýaramly hyzmatdaş tapyň — awiakompaniýalar, myhmanhanalar, syýahatçylyk operatorlary, sagaldyş merkezleri.",
+          "Syýahatçylygyň häzirki täzelikleri bilen tanyşyň — lukmançylyk, agro, eko, medeni we gastro syýahatçylyk.",
+          "Täze pikirler we höwes alyň — çykyşlar, duşuşyklar, tanyşdyryşlar arkaly.",
+          "Biznesiňizi ösdürmegiň mümkinçilikleri- täze tanyşyklar, täze pikirler, täzöe mümkinçilikler."
+        ],
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      },
+      {
+        "title": "Näme üçin sergä gatnaşyjy bolmaly?",
+        "description": [
+          "Hyzmatlaryňyzy halkara derejede tanadyň — Merkezi Aziýanyň giň syýahatçylyk bazary size açyk.",
+          "Pelekdeş hyzmatdaşlar bilen gatnaşyk guryň — syýahatçylyk operatorlary, maýadarlar, degişli ministrlikler.",
+          "Täze müşderiler çekin we bazaryňyzy giňeldiň — hyzmatlaryňyzy we programmalaryňyzy görkezmek arkaly.",
+          "Brendiňizi güýçlendiriň — iri halkara sergä gatnaşmak abraýy ýokarlandyrýar.",
+          "Biznes we maýa goýum mümkinçiliklerine çykmak — syýahatçylyk, bilim, saglyk, oba hojalygy we tehnologiýa ugurlarynda."
+        ],
+        "button": {
+          "text": "",
+          "link": ""
+        }
+      }
+    ]
+  },
+  "partners": {
+    "logosAria": "Карусель партнеров и спонсоров",
+    "title": "О саммите Tourister 2025",
+    "paragraphs": [
+      "Tourister — главный туристический саммит Грузии: динамичная B2B-платформа, которая объединяет глобальные бренды, региональных лидеров и локальных инноваторов.",
+      "Проходит в отеле Hilton Batumi 20–21 ноября и становится точкой встречи для руководителей, отельеров, travel-tech основателей, менеджеров направлений, маркетологов и контент-креаторов. Программа нацелена на будущее, усиливает кооперацию и ускоряет превращение Грузии в туристический хаб региона.",
+      "Приезжаете за нетворком, ростом или совместными проектами — именно здесь соединяется будущее грузинского туризма."
+    ],
+    "cta": "Узнать больше",
+    "videoAlt": "Презентация Tourister 2025",
+    "logos": [
+      {
+        "id": "beta",
+        "alt": "Beta Holding"
+      },
+      {
+        "id": "entrepreneur",
+        "alt": "Entrepreneur"
+      },
+      {
+        "id": "bmg",
+        "alt": "Business Media"
+      },
+      {
+        "id": "exely",
+        "alt": "Exely"
+      },
+      {
+        "id": "gta",
+        "alt": "GTA"
+      }
+    ],
+    "stats": [
+      {
+        "id": "area",
+        "value": "10,000 m²",
+        "label": "Sergi meýdançasy"
+      },
+      {
+        "id": "visitors",
+        "value": "10,000+",
+        "label": "Garaşylýan myhmanlar"
+      },
+      {
+        "id": "countries",
+        "value": "100+",
+        "label": "30-dan gowrak ýurtdan sergi"
+      },
+      {
+        "id": "topManagement",
+        "value": "80%",
+        "label": "Iň ýokary dolandyryş gatnaşyjylary"
+      }
+    ]
+  },
+  "enquire": {
+    "title": "Türkmen syýahaty halkara sergisine ýazylmak açyk",
+    "button": {
+      "text": "Ýüz tutmak",
+      "link": "/stand-form"
+    }
+  },
+
+  "news": "Новости"
+}
