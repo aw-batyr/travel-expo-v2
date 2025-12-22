@@ -7,6 +7,18 @@
     "agenda": "AGENDA",
     "contact": "CONTACT US"
   },
+  "navDropdown": {
+    "visit": {
+      "why": "Why you should visit?",
+      "participants": "List of Participants",
+      "programme": "Programme",
+      "travelGuide": "Travel Guide"
+    },
+    "exhibit": {
+      "about": "About exhibition",
+      "media": "Media"
+    }
+  },
   "header": {
     "cta": "Learn more",
     "switchLang": "{{lang}}",
@@ -200,5 +212,6 @@
     }
   },
 
-  "news": "News"
+  "news": "News",
+  "newsButton": "See more"
 }

@@ -40,30 +40,35 @@ const navItems: NavItem[] = [
   { key: "nav.contact" },
 ];
 
-const dropdownMenus: Record<DropdownMenuKey, DropdownOption[]> = {
-  visit: [
-    { label: "Why you should visit?", href: "#why-visit" },
-    { label: "List of Participants", href: "#participants" },
-    {
-      label: "Programme",
-      href: "/programme.pdf",
-    },
-    {
-      label: "Travel Guide",
-      href: "/travel-guide.pdf",
-    },
-  ],
-  exhibit: [
-    { label: "About exhibition", href: "#about-exhibition" },
-    { label: "Media", href: "#media" },
-  ],
-};
-
 const ticketIconUrl = "/ticket.svg";
 const HEADER_HEIGHT_CSS_VAR = "--site-header-height";
 
 export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
   const { t, i18n } = useTranslation();
+  const dropdownMenus: Record<DropdownMenuKey, DropdownOption[]> = useMemo(
+    () => ({
+      visit: [
+        { label: t("navDropdown.visit.why"), href: "#why-visit" },
+        {
+          label: t("navDropdown.visit.participants"),
+          href: "#participants",
+        },
+        {
+          label: t("navDropdown.visit.programme"),
+          href: "/programme.pdf",
+        },
+        {
+          label: t("navDropdown.visit.travelGuide"),
+          href: "/travel-guide.pdf",
+        },
+      ],
+      exhibit: [
+        { label: t("navDropdown.exhibit.about"), href: "#about-exhibition" },
+        { label: t("navDropdown.exhibit.media"), href: "#media" },
+      ],
+    }),
+    [t]
+  );
 
   const lang = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
   const languageOptions = [
@@ -194,12 +199,12 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                   </a>
 
                   {dropdownList && (
-              <div
-                role="menu"
-                aria-label={`${label} submenu`}
-                className="pointer-events-none absolute left-0 top-full z-20 w-[220px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto pt-2"
-              >
-                <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2">
+                    <div
+                      role="menu"
+                      aria-label={`${label} submenu`}
+                      className="pointer-events-none absolute left-0 top-full z-20 w-[220px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto pt-2"
+                    >
+                      <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2">
                         <ul className="flex flex-col">
                           {dropdownList.map((item) => {
                             const Icon = item.icon;
@@ -274,16 +279,16 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                     {languageOptions
                       .filter((item) => item.code !== lang)
                       .map((item) => (
-                      <li key={item.code}>
-                        <button
-                          type="button"
-                          onClick={() => handleLanguageChange(item.code)}
-                          className="flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-[#333333] transition hover:bg-[#26292E]/[8%] hover:text-black"
-                        >
-                          <span>{item.label}</span>
-                        </button>
-                      </li>
-                    ))}
+                        <li key={item.code}>
+                          <button
+                            type="button"
+                            onClick={() => handleLanguageChange(item.code)}
+                            className="flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-[#333333] transition hover:bg-[#26292E]/[8%] hover:text-black"
+                          >
+                            <span>{item.label}</span>
+                          </button>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </div>

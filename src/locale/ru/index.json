@@ -1,11 +1,23 @@
 {
   "nav": {
-    "about": "ABOUT US",
-    "visit": "VISIT",
-    "exhibit": "EXHIBIT & SPONSOR",
-    "media": "MEDIA",
-    "agenda": "AGENDA",
-    "contact": "CONTACT US"
+    "about": "О НАС",
+    "visit": "ПОСЕТИТЬ",
+    "exhibit": "УЧАСТИЕ И СПОНСОРСТВО",
+    "media": "МЕДИА",
+    "agenda": "ПРОГРАММА",
+    "contact": "КОНТАКТЫ"
+  },
+  "navDropdown": {
+    "visit": {
+      "why": "Почему стоит посетить?",
+      "participants": "Список участников",
+      "programme": "Программа",
+      "travelGuide": "Путеводитель"
+    },
+    "exhibit": {
+      "about": "О выставке",
+      "media": "Медиа"
+    }
   },
   "header": {
     "cta": "Узнать больше",
@@ -162,25 +174,26 @@
     ],
     "stats": [
       {
+        "value": "10,000 м2",
         "id": "area",
-        "value": "10,000 ?2",
-        "label": "???????"
+        "label": "Площадь"
       },
       {
+        "value": "10000 +",
         "id": "visitors",
-        "value": "10000+",
-        "label": "????????? ???????????"
+        "label": "Ожидаемых посетителей "
       },
       {
-        "id": "countries",
         "value": "100+",
-        "label": "??????????? ?? ????? ??? 30 ?????"
+        "id": "countries",
+        "label": "Экспонентов из более чем 30 стран"
       },
       {
-        "id": "topManagement",
         "value": "80%",
-        "label": "?????????? ???-???????????"
+        "id": "topManagement",
+        "label": "Участников топ-менеджмента"
       }
     ]
-  }
+  },
+  "newsButton": "Больше"
 }

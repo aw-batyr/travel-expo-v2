@@ -7,6 +7,18 @@
     "agenda": "AGENDA",
     "contact": "CONTACT US"
   },
+  "navDropdown": {
+    "visit": {
+      "why": "Why you should visit?",
+      "participants": "List of Participants",
+      "programme": "Programme",
+      "travelGuide": "Travel Guide"
+    },
+    "exhibit": {
+      "about": "About exhibition",
+      "media": "Media"
+    }
+  },
   "header": {
     "cta": "Узнать больше",
     "switchLang": "{{lang}}",
@@ -22,7 +34,7 @@
       "accent": "",
       "normal": ""
     },
-    "subtitle": "Увидимся в 2026",
+    "subtitle": "",
     "cta": "Ýüz tutmak",
     "ctaAria": "Узнать больше о Туристер",
     "description": "«Turkmen Travel» — Türkmenistanda syýahatçylygy ösdürmäge bagyşlanan halkara sergi bolup, Aşgabat şäherinde geçirilýär. Sergi dünýäniň dürli ýurtlaryndan syýahatçylyk agentliklerini, myhmanhanalary, awiakompaniýalary we syýahatçylyk operatorlaryny birleşdirip, täze syýahat ugurlaryny giňden tanatmak, hyzmatdaşlyklary ösdürmek hem-de ýurduň medeni we tebigy gözelliklerini wagyz etmek üçin giň mümkinçilik döredýär."
@@ -200,5 +212,6 @@
     }
   },
 
-  "news": "Новости"
+  "news": "Новости",
+  "newsButton": ""
 }

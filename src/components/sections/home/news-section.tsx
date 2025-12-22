@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const NewsSection = () => {
-  const { t, i18n } = useTranslation("index");
+  const { t, i18n } = useTranslation();
   const lang = i18n.language || "ru";
   const { data, isLoading, error } = useNewsQuery(lang);
 
@@ -59,7 +59,7 @@ export const NewsSection = () => {
         )}
 
         <Button className="w-full max-w-[180px] rounded-[4px] bg-[var(--color-secondary)] px-6 py-3 text-sm font-normal uppercase tracking-[0.04em] text-white hover:bg-[#d73a1f] mx-auto">
-          See more
+          {t("newsButton")}
         </Button>
       </PageContainer>
     </SectionShell>
