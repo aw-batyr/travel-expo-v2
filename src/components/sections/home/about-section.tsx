@@ -36,12 +36,12 @@ export function AboutSection() {
             <h2 className="text-[24px] font-medium uppercase leading-[26.4px] text-foreground">
               {t("about.heading")}
             </h2>
-            <p className="text-sm leading-6 text-[#333333]">
+            <p className="text-sm leading-6 text-muted-foreground">
               {t("about.body")}
             </p>
           </header>
 
-          <div className="space-y-5 text-sm leading-6 text-[#333333]">
+          <div className="space-y-5 text-sm leading-6 text-muted-foreground">
             <h3 className="text-sm font-bold leading-6 text-foreground">
               {t("about.subheading")}
             </h3>

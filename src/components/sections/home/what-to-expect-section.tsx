@@ -28,7 +28,7 @@ export function WhatToExpectSection() {
             <h3 className="text-[20px] font-semibold leading-[26px] text-black">
               {item.title}
             </h3>
-            <ul className="space-y-3 text-[14px] leading-7 text-[#333333]">
+            <ul className="space-y-3 text-[14px] leading-7 text-muted-foreground">
               {item.description.map((item) => (
                 <li key={item} className="ms-5 list-disc">
                   {item}

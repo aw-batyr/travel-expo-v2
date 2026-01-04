@@ -82,7 +82,7 @@ export function PartnersSection() {
             <h2 className="text-[23px] font-medium uppercase tracking-[0.02em] text-black">
               {t("partners.title")}
             </h2>
-            <div className="space-y-4 text-[14px] leading-[24px] text-[#333333]">
+            <div className="space-y-4 text-[14px] leading-[24px] text-muted-foreground">
               {paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

@@ -66,7 +66,7 @@ export function AttendSection() {
                 <h3 className="text-lg font-medium leading-[22px] text-[#1c1c24]">
                   {title}
                 </h3>
-                <p className="text-[13px] leading-[20px] text-[#333333]">
+                <p className="text-[13px] leading-[20px] text-muted-foreground">
                   {description}
                 </p>
                 <Button

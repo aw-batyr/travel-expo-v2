@@ -12,6 +12,7 @@ import {
 } from "react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import { MobileMenu } from "./mobile-menu";
 
 type SiteHeaderProps = {
@@ -23,6 +24,7 @@ type DropdownMenuKey = "visit" | "exhibit";
 type NavItem = {
   key: string;
   dropdownId?: DropdownMenuKey;
+  href?: string;
 };
 
 type DropdownOption = {
@@ -32,39 +34,53 @@ type DropdownOption = {
 };
 
 const navItems: NavItem[] = [
-  { key: "nav.about" },
+  { key: "nav.about", href: "/about" },
   { key: "nav.visit", dropdownId: "visit" },
   { key: "nav.exhibit", dropdownId: "exhibit" },
-  { key: "nav.media" },
+  { key: "nav.media", href: "" },
   { key: "nav.agenda" },
-  { key: "nav.contact" },
+  { key: "nav.contact", href: "/contact-us" },
 ];
 
 const ticketIconUrl = "/ticket.svg";
+const blueLogoUrl = "/blue-logo.svg";
 const HEADER_HEIGHT_CSS_VAR = "--site-header-height";
 
 export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
   const { t, i18n } = useTranslation();
+  const { pathname } = useLocation();
+  const isHome = pathname === "/" || pathname === "";
   const dropdownMenus: Record<DropdownMenuKey, DropdownOption[]> = useMemo(
     () => ({
       visit: [
         { label: t("navDropdown.visit.why"), href: "#why-visit" },
         {
           label: t("navDropdown.visit.participants"),
-          href: "#participants",
+          href: "",
         },
         {
           label: t("navDropdown.visit.programme"),
-          href: "/programme.pdf",
+          href: "",
         },
         {
           label: t("navDropdown.visit.travelGuide"),
-          href: "/travel-guide.pdf",
+          href: "",
         },
       ],
       exhibit: [
-        { label: t("navDropdown.exhibit.about"), href: "#about-exhibition" },
-        { label: t("navDropdown.exhibit.media"), href: "#media" },
+        { label: t("navDropdown.exhibit.bookStand"), href: "/stand-form" },
+        {
+          label: t("navDropdown.exhibit.participationOptions"),
+          href: "/participation-options",
+        },
+        {
+          label: t("navDropdown.exhibit.partnershipOpportunities"),
+          href: "/partner-opportunities",
+        },
+        {
+          label: t("navDropdown.exhibit.tourismServices"),
+          href: "/tourism-services",
+        },
       ],
     }),
     [t]
@@ -90,7 +106,12 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
     [t]
   );
   const mobileNavItems = useMemo(
-    () => translatedNav.map(({ key, label }) => ({ key, label })),
+    () =>
+      translatedNav.map(({ key, label, href }) => ({
+        key,
+        label,
+        href,
+      })),
     [translatedNav]
   );
 
@@ -161,34 +182,40 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
       ref={headerRef}
       className={cn(
         "absolute inset-x-0 top-0 z-50 w-full bg-transparent py-6",
+        !isHome && "bg-primary",
         className
       )}
     >
       <PageContainer className="flex flex-wrap items-center justify-between gap-4 md:flex-nowrap md:gap-6">
-        <div className="flex items-center gap-3">
-          <img src={Logo} alt={logoAlt} className="md:h-[58px] h-10 w-auto" />
-        </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={isHome ? Logo : blueLogoUrl}
+            alt={logoAlt}
+            className="md:h-[58px] h-10 w-auto"
+          />
+        </Link>
 
         <nav
           aria-label={t("header.navLabel")}
           className="hidden flex-1 justify-center md:flex"
         >
           <ul className="flex flex-wrap items-center justify-center text-sm font-medium uppercase tracking-wide text-white/80">
-            {translatedNav.map(({ label, dropdownId, key }) => {
+            {translatedNav.map(({ label, dropdownId, key, href }) => {
               const dropdownList = dropdownId
                 ? dropdownMenus[dropdownId]
                 : undefined;
               const hasDropdown = Boolean(dropdownList?.length);
+              const navHref = hasDropdown ? "#" : href ?? "#";
 
               return (
                 <li key={key} className="group relative">
-                  <a
+                  <Link
                     className="inline-flex items-center gap-1 px-2.5 py-2 text-sm leading-none transition hover:bg-[var(--color-secondary)] hover:text-white focus-visible:bg-[var(--color-background)] focus-visible:text-white"
-                    href="#"
+                    to={navHref}
                     aria-haspopup={hasDropdown ? "true" : undefined}
                     aria-expanded={hasDropdown ? "false" : undefined}
                   >
-                    <span>{label}</span>
+                    <span className="">{label}</span>
                     {hasDropdown && (
                       <ChevronDown
                         aria-hidden
@@ -196,24 +223,24 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                         strokeWidth={2.5}
                       />
                     )}
-                  </a>
+                  </Link>
 
                   {dropdownList && (
                     <div
                       role="menu"
                       aria-label={`${label} submenu`}
-                      className="pointer-events-none absolute left-0 top-full z-20 w-[220px] bg-transparent opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto pt-2"
+                      className="pointer-events-none absolute left-0 top-full z-20 w-[220px] bg-transparent opacity-0 transition duration-200 group-focus-within:opacity-100 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto pt-2"
                     >
-                      <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2">
+                      <div className="overflow-hidden rounded-[2px] bg-[#F0EFEF] py-2 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
                         <ul className="flex flex-col">
                           {dropdownList.map((item) => {
                             const Icon = item.icon;
                             return (
                               <li key={item.label}>
-                                <a
-                                  href={item.href}
+                                <Link
+                                  to={item.href}
                                   role="menuitem"
-                                  className="flex items-center justify-between gap-3 px-4 py-4 text-sm font-medium text-[#333333] transition hover:bg-[#26292E]/[8%] lowercase first-letter:uppercase! hover:text-black focus-visible:bg-[var(--color-background)] focus-visible:text-black"
+                                  className="flex items-center justify-between gap-3 px-4 py-4 text-sm font-medium text-muted-foreground transition hover:bg-[#26292E]/[8%] capitalize hover:text-black focus-visible:bg-[var(--color-background)] focus-visible:text-black"
                                 >
                                   <span>{item.label}</span>
                                   {Icon && (
@@ -222,7 +249,7 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                                       aria-hidden
                                     />
                                   )}
-                                </a>
+                                </Link>
                               </li>
                             );
                           })}
@@ -259,7 +286,12 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
               <button
                 type="button"
                 aria-label={switchLangLabel}
-                className="inline-flex items-center gap-1 rounded-[2px] bg-[var(--color-primary)] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white transition hover:bg-[#f3a320]"
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-[2px] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white transition",
+                  isHome
+                    ? "bg-[var(--color-primary)] hover:bg-[#f3a320]"
+                    : "bg-accent-blue hover:bg-accent-blue/90"
+                )}
               >
                 <span>{lang.toUpperCase()}</span>
                 <ChevronDown
@@ -283,7 +315,7 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                           <button
                             type="button"
                             onClick={() => handleLanguageChange(item.code)}
-                            className="flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-[#333333] transition hover:bg-[#26292E]/[8%] hover:text-black"
+                            className="flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-muted-foreground transition hover:bg-[#26292E]/[8%] hover:text-black"
                           >
                             <span>{item.label}</span>
                           </button>

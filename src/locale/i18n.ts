@@ -7,9 +7,9 @@ import tm from "./tm/index.json";
 
 void i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: en },
-    ru: { translation: ru },
-    tm: { translation: tm },
+    en: { translation: en, contacts: en.contacts },
+    ru: { translation: ru, contacts: ru.contacts },
+    tm: { translation: tm, contacts: tm.contacts },
   },
   lng: "en",
   fallbackLng: "en",

@@ -5,6 +5,9 @@
     "exhibit": "EXHIBIT & SPONSOR",
     "media": "MEDIA",
     "agenda": "AGENDA",
+    "participation-options": "Participation Options",
+    "partners-opportunities": "Partnership Opportunities",
+    "tourism-services": "Tourism Services",
     "contact": "CONTACT US"
   },
   "navDropdown": {
@@ -15,8 +18,10 @@
       "travelGuide": "Travel Guide"
     },
     "exhibit": {
-      "about": "About exhibition",
-      "media": "Media"
+      "bookStand": "Book a stand",
+      "participationOptions": "Participation Options",
+      "partnershipOpportunities": "Partnership Opportunities",
+      "tourismServices": "Tourism Services"
     }
   },
   "header": {
@@ -210,6 +215,42 @@
       "text": "Register",
       "link": ""
     }
+  },
+  "participationOptions": {
+    "title": "Participation Options",
+    "exhibitionSpace": "Exhibition Space Rental",
+    "spaceOnly": "Space Only",
+    "example": "Example",
+    "spaceOnlyDescription": "Raw exhibition space for subsequent construction (standard booth or customized design). Includes general cleaning and pavilion security. Electricity is not included in the price.",
+    "standardBooth": "Standard Booth Construction",
+    "customBooth": "Custom Booth Design",
+    "boothExampleDescription": "Includes: basic electrical connection (220V – 2 kW), walls (standard or customized design), general cleaning, and pavilion security.",
+    "registrationFee": "Participation with a booth includes a registration fee.",
+    "pricingNote": "Please check the pricing with the project manager."
+  },
+  "tourismServices": {
+    "intro1": "Turkmen Expo is pleased to offer a full range of services for the successful organization of events in Ashgabat. We provide comfortable accommodation, transportation arrangements, ticket reservations, and support throughout your visit.",
+    "intro2": "The Archabil Hotel is a five-star complex located just 5.9 km from the center of Ashgabat. It's an ideal location for business delegations and tourists. The hotel offers a variety of rooms, as well as swimming pools, tennis courts, a fitness center, a spa, and a business center. All services are available for your convenience and comfortable stay.",
+    "imageAlt1": "Exhibition complex",
+    "imageAlt2": "Yyldyz Hotel",
+    "hotelYyldyz": "The Yyldyz Hotel is one of the tallest and most prestigious hotels in Ashgabat, boasting panoramic views of the city. It offers comfortable relaxation and business, with luxurious rooms, restaurants, a spa, a fitness center, and swimming pools.",
+    "siteLabel": "Website:",
+    "recommendation": "We recommend the above-mentioned hotels as they offer ideal conditions for comfortable accommodation and high-quality service.",
+    "contactNote": "For more information and assistance with booking, please contact the project manager."
+  },
+
+  "contacts": {
+    "title": "Contact us",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "company": "Company name",
+    "message": "Message",
+    "button": "Send",
+    "title_2": "Contact details",
+    "address": "Address",
+    "venue": "744000, Ashgabat, Bitarap Turkmenistan ave., 183",
+    "submitted": "Your message is submitted"
   },
 
   "news": "News",

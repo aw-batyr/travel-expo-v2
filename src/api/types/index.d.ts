@@ -34,3 +34,11 @@ export interface NewsResponse {
   data: NewsItem[];
   pagination: Pagination;
 }
+
+export interface ContactsFormType {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  msg: string;
+}
