@@ -197,7 +197,7 @@ export default function About() {
       {/* Venue Section */}
       <section className="gap-6 relative overflow-hidden">
         <PageContainer className="md:py-20 py-10 flex lg:flex-row flex-col lg:gap-12 gap-0 items-center">
-          <div className="flex-[0_0_520px]">
+          <div className="md:flex-[0_0_520px]">
             <h3 className="text-2xl font-medium mb-6">Venue</h3>
             <div className="text-sm text-muted-foreground flex flex-col gap-6 mb-10">
               {venueText.map((item) => (

@@ -23,7 +23,7 @@ export function PastSpeakersSection() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="relative flex h-full min-h-[260px] items-center px-20 py-8 sm:min-h-[320px] md:min-h-[360px] lg:min-h-[414px]">
+          <div className="relative flex h-full min-h-[260px] items-center md:px-20 px-5 py-8 sm:min-h-[320px] md:min-h-[360px] lg:min-h-[414px]">
             <div className="max-w-[515px] rounded-[3px] bg-white/80 p-10 shadow backdrop-blur-sm">
               <p className="text-[22px] font-semibold leading-[30px] text-[#1c1c24] sm:text-[24px] sm:leading-[32px]">
                 {t("enquire.title")}

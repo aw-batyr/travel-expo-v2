@@ -32,7 +32,7 @@
   "hero": {
     "ariaLabel": "Hero section",
     "titleLine1": {
-      "accent": "Turkmentravel Expo -2026”",
+      "accent": "“Turkmentravel Expo -2026”",
       "normal": "International Exhibition "
     },
     "titleLine2": {
@@ -156,11 +156,9 @@
   },
   "partners": {
     "logosAria": "Partners and sponsors carousel",
-    "title": "About Tourister 2025",
+    "title": "About Turkmentravel Expo - 2026",
     "paragraphs": [
-      "Tourister is Georgia’s flagship tourism summit - a dynamic, multi-format B2B platform uniting global brands, regional leaders, and local innovators.",
-      "Hosted in Hotel Hilton Batumi on November 20-21, Tourister is a strategic meeting point for decision-makers, hoteliers, travel tech founders, destination managers, marketers, and content creators. With a future-focused agenda, the summit fuels cooperation and accelerates Georgia’s transformation into a regional tourism hub.",
-      "Whether you’re here to network, grow, or create, Tourister is where the future of Georgian tourism connects."
+      "Turkmen Travel is an international exhibition dedicated to the development of tourism in Turkmenistan, held in Ashgabat. It brings together travel agencies, hotels, airlines, and tour operators from around the world to present tourist destinations, develop partnerships, and promote the country’s cultural and natural attractions."
     ],
     "cta": "Learn more",
     "videoAlt": "Tourister 2025 presentation",

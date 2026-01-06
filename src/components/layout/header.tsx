@@ -68,7 +68,7 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
         },
       ],
       exhibit: [
-        { label: t("navDropdown.exhibit.bookStand"), href: "/stand-form" },
+        { label: t("navDropdown.exhibit.bookStand"), href: "" },
         {
           label: t("navDropdown.exhibit.participationOptions"),
           href: "/participation-options",
@@ -325,20 +325,6 @@ export const Header = memo(function SiteHeader({ className }: SiteHeaderProps) {
                 </div>
               </div>
             </div>
-            <Button
-              size="sm"
-              className="rounded-[2px] bg-[var(--color-secondary)] px-3 py-2 text-[13px] font-semibold uppercase tracking-wide text-white hover:bg-[#d73a1f]"
-            >
-              <span className="flex items-center gap-2">
-                <img
-                  src={ticketIconUrl}
-                  alt=""
-                  className="h-[14px] w-[14px]"
-                  aria-hidden
-                />
-                {t("header.cta")}
-              </span>
-            </Button>
           </div>
         </div>
       </PageContainer>

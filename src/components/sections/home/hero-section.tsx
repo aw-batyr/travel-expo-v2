@@ -25,7 +25,7 @@ export const HeroSection = memo(function HeroSection() {
           src="https://travel.turkmenexpo.com/app/storage/app/media/video/IMG_9811.mp4"
         />
         <PageContainer className="relative z-10 top-[5vw] left-0 flex min-h-[calc(100vh-var(--site-header-height,106px))] flex-col items-center justify-center gap-12 px-6 pb-20 text-center">
-          <div className="flex flex-col items-center gap-10">
+          <div className="flex flex-col items-center md:-mt-40 gap-10">
             <div className="space-y-4">
               <h1 className="text-[40px] font-medium uppercase leading-[1.05] tracking-[0.02em] text-white sm:text-[52px] md:text-[64px] lg:text-[72px]">
                 <span className="text-white">
@@ -42,9 +42,6 @@ export const HeroSection = memo(function HeroSection() {
                   {t("hero.titleLine2.normal")}
                 </span>
               </h1>
-              <p className="text-lg font-medium uppercase tracking-[0.02em] text-white sm:text-xl md:text-[23px]">
-                {t("hero.subtitle")}
-              </p>
             </div>
 
             <Link
@@ -60,9 +57,9 @@ export const HeroSection = memo(function HeroSection() {
             </Link>
           </div>
 
-          <p className="max-w-[638px] text-[14px] leading-[24px] text-white/80">
+          {/* <p className="max-w-[638px] text-[14px] leading-[24px] text-white/80">
             {t("hero.description")}
-          </p>
+          </p> */}
         </PageContainer>
       </SectionShell>
 

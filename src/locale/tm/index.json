@@ -1,25 +1,25 @@
 {
   "nav": {
-    "about": "ABOUT US",
-    "visit": "VISIT",
-    "exhibit": "EXHIBIT & SPONSOR",
-    "media": "MEDIA",
+    "about": "MAGLUMAT",
+    "visit": "GATNAŞMAK",
+    "exhibit": "SERGI",
+    "media": "METBUGAT",
     "participation-options": "Gatnaşyk görnüşleri",
     "partners-opportunities": "Hyzmatdaşlyk mümkinçilikleri",
     "tourism-services": "Syýahatçylyk hyzmatlary",
 
     "agenda": "AGENDA",
-    "contact": "CONTACT US"
+    "contact": "HABARLAŞMAK ÜÇIN"
   },
   "navDropdown": {
     "visit": {
-      "why": "Why you should visit?",
-      "participants": "List of Participants",
-      "programme": "Programme",
-      "travelGuide": "Travel Guide"
+      "why": "Näme üçin gatnaşmaly?",
+      "participants": "Gatnaşyjylaryň sanawy",
+      "programme": "Maksatnama",
+      "travelGuide": "Syýahat gollanmasy"
     },
     "exhibit": {
-      "bookStand": "Stend bronlamak",
+      "bookStand": "Stenda ýazylmak",
       "participationOptions": "Gatnaşmak mümkinçilikleri",
       "partnershipOpportunities": "Hyzmatdaşlyk mümkinçilikleri",
       "tourismServices": "Syýahatçylyk hyzmatlary"

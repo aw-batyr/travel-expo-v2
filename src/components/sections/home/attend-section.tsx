@@ -53,7 +53,7 @@ export function AttendSection() {
               key={title}
               className="flex flex-[0_0_380px] shrink-0 flex-col overflow-hidden rounded-[3px] border border-[#e4e4e4] bg-white shadow-sm sm:w-[280px] md:w-[300px]"
             >
-              <div className="h-[180px] sm:h-[280px] overflow-hidden">
+              <div className="h-[280px] overflow-hidden">
                 <img
                   alt={title ?? ""}
                   src={photos[id]}
