@@ -18,3 +18,16 @@ export const postContact = async (data: ContactsFormType): Promise<boolean> => {
 
   return res.status === 201;
 };
+
+export const postStand = async (
+  data: StandFormType,
+  lang: string
+): Promise<boolean> => {
+  const res = axios_url.post(`book_stand_form`, data, {
+    headers: {
+      "Accept-Language": lang,
+    },
+  });
+
+  return (await res).status === 201;
+};

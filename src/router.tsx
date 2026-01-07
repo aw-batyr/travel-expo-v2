@@ -8,6 +8,7 @@ import { CoverRouteLayout } from "./components/layout/cover-route-layout";
 import ParticipationOptions from "./pages/participation-options";
 import PartnerOpportunities from "./pages/partner-opportunities";
 import TourismServices from "./pages/tourism-services";
+import StandForm from "./pages/stand-form";
 
 export const router = [
   {
@@ -44,6 +45,10 @@ export const router = [
           {
             element: <TourismServices />,
             path: "tourism-services",
+          },
+          {
+            element: <StandForm />,
+            path: "stand-form",
           },
         ],
       },
