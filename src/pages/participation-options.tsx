@@ -80,9 +80,9 @@ export default function ParticipationOptions() {
           <div>
             <p className="mb-5 text-base">{exampleLabel}:</p>
             <img
-              src={"/example.jpeg"}
+              src={"/example.jpg"}
               alt={exampleLabel}
-              className="h-[160px] w-full rounded-sm object-cover md:h-[190px]"
+              className="h-[160px] w-full rounded-sm object-cover md:h-[300px]"
             />
             <p className="mt-2 text-base leading-relaxed">
               {t("participationOptions.boothExampleDescription")}
@@ -91,9 +91,9 @@ export default function ParticipationOptions() {
           <div>
             <p className="mb-5 text-base">{exampleLabel}:</p>
             <img
-              src={"/example-2.jpeg"}
+              src={"/example-2.jpg"}
               alt={exampleLabel}
-              className="h-[160px] w-full rounded-sm object-cover md:h-[190px]"
+              className="h-[160px] w-full rounded-sm object-cover md:h-[300px]"
             />
             <p className="mt-2 text-base leading-relaxed">
               {t("participationOptions.boothExampleDescription")}

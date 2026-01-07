@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel, PageContainer, SectionShell } from "@/components/shared";
 import { PlayCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 type StatItem = {
   id: string;
@@ -87,12 +88,14 @@ export function PartnersSection() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            <Button
-              className="inline-flex w-fit rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
-              aria-label={t("partners.cta")}
-            >
-              {t("partners.cta")}
-            </Button>
+            <Link to="/about">
+              <Button
+                className="inline-flex w-fit rounded-[3px] bg-[var(--color-secondary)] px-[18px] py-[13px] text-[14px] font-semibold uppercase tracking-[0.02em] text-white hover:bg-[#d73a1f]"
+                aria-label={t("partners.cta")}
+              >
+                {t("partners.cta")}
+              </Button>
+            </Link>
           </div>
 
           <div className="flex flex-1 justify-center">

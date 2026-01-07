@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import { Carousel, PageContainer, SectionShell } from "@/components/shared";
 
 type AttendCard = {
@@ -48,7 +47,7 @@ export function AttendSection() {
             dragFree: false,
             containScroll: "trimSnaps",
           }}
-          renderSlide={({ title, description, button }, id) => (
+          renderSlide={({ title, description }, id) => (
             <article
               key={title}
               className="flex flex-[0_0_380px] shrink-0 flex-col overflow-hidden rounded-[3px] border border-[#e4e4e4] bg-white shadow-sm sm:w-[280px] md:w-[300px]"
@@ -69,13 +68,6 @@ export function AttendSection() {
                 <p className="text-[13px] leading-[20px] text-muted-foreground">
                   {description}
                 </p>
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  className="mt-auto h-[36px] min-w-20 rounded-[3px] w-fit px-4 text-xs font-semibold uppercase tracking-[0.04em]"
-                >
-                  {button.text}
-                </Button>
               </div>
             </article>
           )}

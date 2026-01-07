@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { PageContainer } from "@/components/shared/page-container";
 import { SectionShell } from "@/components/shared/section-shell";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function PastSpeakersSection() {
   const { t } = useTranslation();
@@ -29,13 +30,15 @@ export function PastSpeakersSection() {
                 {t("enquire.title")}
               </p>
 
-              <Button
-                variant="secondary"
-                size="sm"
-                className="mt-14 h-11 rounded-[3px] px-6 text-xs font-semibold uppercase tracking-[0.05em]"
-              >
-                {t("enquire.button.text")}
-              </Button>
+              <Link to="/contact-us">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="mt-14 h-11 rounded-[3px] px-6 text-xs font-semibold uppercase tracking-[0.05em]"
+                >
+                  {t("enquire.button.text")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
